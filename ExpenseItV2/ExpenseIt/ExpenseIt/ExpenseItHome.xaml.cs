@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Xml;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,9 @@ namespace ExpenseIt
     /// </summary>
     public partial class ExpenseItHome : Page
     {
+
+        //Create an instance of XmlText reader to access the xml file 
+        XmlTextReader reader = new XmlTextReader("People.xml");
         public ExpenseItHome()
         {
             InitializeComponent();
@@ -30,6 +34,21 @@ namespace ExpenseIt
             // View Expense Report
             ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.peopleListBox.SelectedItem);
             this.NavigationService.Navigate(expenseReportPage);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
