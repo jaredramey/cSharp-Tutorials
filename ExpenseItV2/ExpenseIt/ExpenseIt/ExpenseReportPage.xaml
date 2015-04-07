@@ -8,6 +8,10 @@
 	Title="ExpenseReportPage">
 
     <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="AF101880439_en-us_draft.png" />
+        </Grid.Background>
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="230" />
