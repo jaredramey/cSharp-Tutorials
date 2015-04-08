@@ -25,27 +25,42 @@ namespace ExpenseIt
         pPerson myPerson = new pPerson();
         XmlWriterSettings settings = new XmlWriterSettings();
         XDocument doc = XDocument.Load("C:/Users/jared.ramey/Documents/GitHub/cSharp-Tutorials/ExpenseItV2/ExpenseIt/ExpenseIt/People.xml");
-        XElement newExpense;
-        IEnumerable<XElement> Person;
+        XElement newExpense;        
         public string PersonExpenseT { get; set; }
         public string PersonExpenseC { get; set; }
+        public string thePerson { get; set; }
         public NewExpense()
         {
             InitializeComponent();
             settings.Indent = true;
-            Person = from el in doc.Elements("Person") where (string)el.Attribute("Name") == "" select el;
+
         }
-        public NewExpense(object data)
+        public NewExpense(object data, string thePerson)
             : this()
         {
             // Bind to expense report data. 
             this.DataContext = data;
-            
+
+            //var y = from a in doc.Elements("Person") where a.Attribute("Name").ToString()  == thePerson select a;
+            //newExpense = XElement.Parse(y.First().ToString());
+
+            var z = from obj in doc.Elements("Expenses").Elements("Person") where obj.Attribute("Name").Value == thePerson select obj;
+            newExpense = XElement.Parse(z.First().ToString());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            PersonExpenseT = TxtType.Text;
+            PersonExpenseC = TxtCost.Text;
 
+            // newPerson.Add(new XElement("Person", new XAttribute("Name", PersonName), new XAttribute("Department", PersonDep)));
+
+            newExpense.Add(new XElement("Expense", new XAttribute("ExpenseType", PersonExpenseT), new XAttribute("ExpenseCost", PersonExpenseC)));
+
+            doc.Save("C:/Users/jared.ramey/Documents/GitHub/cSharp-Tutorials/ExpenseItV2/ExpenseIt/ExpenseIt/People.xml");
+
+            ExpenseItHome BackHome = new ExpenseItHome();
+            this.NavigationService.Navigate(BackHome);
         }
     }
 }

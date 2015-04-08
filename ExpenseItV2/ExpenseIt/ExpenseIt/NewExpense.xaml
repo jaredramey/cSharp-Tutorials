@@ -82,9 +82,9 @@ FontWeight="Bold" FontSize="18" Foreground="#0066cc">
 
         <Label Grid.Column="0" Grid.Row="1" Style="{StaticResource labelStyle}" Margin="43,85,0,0" RenderTransformOrigin="0.494,0.5">Cost:</Label>
 
-        <TextBox Grid.Column="0" Grid.Row="1" Width="125" Margin="95,36,10,189" Name="TxtName"/>
+        <TextBox Grid.Column="0" Grid.Row="1" Width="125" Margin="95,36,10,189" Name="TxtType"/>
 
-        <TextBox Grid.Column="0" Grid.Row="1" Width="125" Margin="95,85,10,140" Name="TxtDepartment"/>
+        <TextBox Grid.Column="0" Grid.Row="1" Width="125" Margin="95,85,10,140" Name="TxtCost"/>
 
         <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource buttonStyle}" Margin="0,134,10,89" Height="Auto" RenderTransformOrigin="0.504,0.543" Click="Button_Click">Enter</Button>
 

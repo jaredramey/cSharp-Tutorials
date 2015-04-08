@@ -1,4 +1,5 @@
 ﻿using System.Xml;
+using System.Xml.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,7 +45,9 @@ namespace ExpenseIt
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            NewExpense NewExpense = new NewExpense(this.peopleListBox.SelectedItem);
+            string test = ((XmlElement)peopleListBox.SelectedItem).GetAttribute("Name");
+
+            NewExpense NewExpense = new NewExpense(this.peopleListBox.SelectedItem, test);
             this.NavigationService.Navigate(NewExpense);
         }
 
