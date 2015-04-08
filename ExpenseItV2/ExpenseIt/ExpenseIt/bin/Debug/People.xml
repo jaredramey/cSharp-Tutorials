@@ -16,6 +16,5 @@
   <Person Name="Mary" Department="Finance">
     <Expense ExpenseType="Dinner" ExpenseAmount="$100.00" />
   </Person>
-  <Person Name="TestName" Department="TestDepartment" />
-  <Person Name="Oh boy" Department="Working" />
+  <Person Name="Jhon Doe" Department="Finances" />
 </Expenses>

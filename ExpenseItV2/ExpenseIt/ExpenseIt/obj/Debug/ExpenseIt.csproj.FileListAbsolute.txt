@@ -18,3 +18,5 @@ C:\Users\jared.ramey\Documents\GitHub\cSharp-Tutorials\ExpenseItV2\ExpenseIt\Exp
 C:\Users\jared.ramey\Documents\GitHub\cSharp-Tutorials\ExpenseItV2\ExpenseIt\ExpenseIt\obj\Debug\ExpenseIt.pdb
 C:\Users\jared.ramey\Documents\GitHub\cSharp-Tutorials\ExpenseItV2\ExpenseIt\ExpenseIt\obj\Debug\NewPerson.baml
 C:\Users\jared.ramey\Documents\GitHub\cSharp-Tutorials\ExpenseItV2\ExpenseIt\ExpenseIt\obj\Debug\NewPerson.g.cs
+C:\Users\jared.ramey\Documents\GitHub\cSharp-Tutorials\ExpenseItV2\ExpenseIt\ExpenseIt\obj\Debug\NewExpense.baml
+C:\Users\jared.ramey\Documents\GitHub\cSharp-Tutorials\ExpenseItV2\ExpenseIt\ExpenseIt\obj\Debug\NewExpense.g.cs

@@ -18,35 +18,34 @@ using System.Windows.Shapes;
 namespace ExpenseIt
 {
     /// <summary>
-    /// Interaction logic for NewPerson.xaml
+    /// Interaction logic for NewExpense.xaml
     /// </summary>
-    public partial class NewPerson : Page
+    public partial class NewExpense : Page
     {
         pPerson myPerson = new pPerson();
         XmlWriterSettings settings = new XmlWriterSettings();
         XDocument doc = XDocument.Load("C:/Users/jared.ramey/Documents/GitHub/cSharp-Tutorials/ExpenseItV2/ExpenseIt/ExpenseIt/People.xml");
-        XElement newPerson;
-        public string PersonName { get; set; }
-        public string PersonDep { get; set; }
-        public NewPerson()
+        XElement newExpense;
+        IEnumerable<XElement> Person;
+        public string PersonExpenseT { get; set; }
+        public string PersonExpenseC { get; set; }
+        public NewExpense()
         {
             InitializeComponent();
             settings.Indent = true;
-            newPerson = doc.Element("Expenses");
+            Person = from el in doc.Elements("Person") where (string)el.Attribute("Name") == "" select el;
+        }
+        public NewExpense(object data)
+            : this()
+        {
+            // Bind to expense report data. 
+            this.DataContext = data;
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            PersonName = TxtName.Text;
-            PersonDep = TxtDepartment.Text;
 
-            newPerson.Add(new XElement("Person", new XAttribute("Name", PersonName), new XAttribute("Department", PersonDep)));
-
-            doc.Save("C:/Users/jared.ramey/Documents/GitHub/cSharp-Tutorials/ExpenseItV2/ExpenseIt/ExpenseIt/People.xml");
-
-            ExpenseItHome BackHome = new ExpenseItHome();
-            this.NavigationService.Navigate(BackHome);
         }
     }
 }
