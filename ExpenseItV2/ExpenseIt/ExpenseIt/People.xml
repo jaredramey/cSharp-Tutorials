@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Expenses>
+  <Person Name="Mike" Department="Legal">
+    <Expense ExpenseType="Lunch" ExpenseAmount="$50.00" />
+    <Expense ExpenseType="Transportation" ExpenseAmount="$50.00" />
+  </Person>
+  <Person Name="Lisa" Department="Marketing">
+    <Expense ExpenseType="Document printing" ExpenseAmount="$50.00" />
+    <Expense ExpenseType="Gift" ExpenseAmount="$125.00" />
+  </Person>
+  <Person Name="John" Department="Engineering">
+    <Expense ExpenseType="Magazine subscription" ExpenseAmount="$50.00" />
+    <Expense ExpenseType="New machine" ExpenseAmount="$600.00" />
+    <Expense ExpenseType="Software" ExpenseAmount="$500.00" />
+  </Person>
+  <Person Name="Mary" Department="Finance">
+    <Expense ExpenseType="Dinner" ExpenseAmount="$100.00" />
+  </Person>
+</Expenses>
