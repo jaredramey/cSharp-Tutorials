@@ -3,7 +3,6 @@
   <Person Name="Mike" Department="Legal">
     <Expense ExpenseType="Lunch" ExpenseAmount="$50.00" />
     <Expense ExpenseType="Transportation" ExpenseAmount="$50.00" />
-    <Expense ExpenseType="Test" ExpenseAmount="$10.00" />
   </Person>
   <Person Name="Lisa" Department="Marketing">
     <Expense ExpenseType="Document printing" ExpenseAmount="$50.00" />
@@ -17,8 +16,4 @@
   <Person Name="Mary" Department="Finance">
     <Expense ExpenseType="Dinner" ExpenseAmount="$100.00" />
   </Person>
-  <Person Name="TestName" Department="TestDepartment">
-    <Expense ExpenseType="Test" ExpenseAmount="$10.00" />
-  </Person>
-  <Person Name="Oh boy" Department="Working" />
 </Expenses>

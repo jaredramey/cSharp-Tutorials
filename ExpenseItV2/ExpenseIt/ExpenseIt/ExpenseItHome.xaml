@@ -82,6 +82,5 @@
         <Button Grid.Column="0" Grid.Row="2" Margin="10,10,0,57" Width="125" HorizontalAlignment="Left" Click="Button_Click_3">New Expense</Button>
 
         <!-- Button setup for new expense entry-->
-        <Button Grid.Column="0" Grid.Row="2" Margin="10,58,0,9" Width="125" HorizontalAlignment="Left" Click="Button_Click_4">Delete Person</Button>
     </Grid>
 </Page>
